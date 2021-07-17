@@ -6,9 +6,11 @@ public class GameManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject spawnPoint;
+    private GameManager parentGame;
 
-    public void EnableGame() {
+    public void EnableGame(GameManager parentGame) {
         player.SetActive(true);
+        this.parentGame = parentGame; // for going backwards
     }
     public void DisableGame() {
         player.SetActive(false);
