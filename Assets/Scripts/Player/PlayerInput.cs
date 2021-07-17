@@ -10,10 +10,12 @@ public class PlayerInput : MonoBehaviour
     private bool canInput;
 
     private Vector2 newDirection;
+    private PlayerController pController;
 
     private void Awake()
     {
         controls = new MainControls();
+        pController = GetComponent<PlayerController>();
     }
 
     private void OnEnable()
@@ -84,7 +86,6 @@ public class PlayerInput : MonoBehaviour
     //Sets the direction for the player
     private void OnDirection(Vector2 direction)
     {
-        Debug.Log("On Direction: " + direction.ToString());
         newDirection = direction;
         UpdateMovement();
     }
@@ -92,23 +93,30 @@ public class PlayerInput : MonoBehaviour
     //Calls the primary action on the player
     private void OnPrimaryAction()
     {
-        //!TODO: Call primary action on player controller
-        Debug.Log("OnPrimaryAction!");
+        if (!canInput) { return; }
+
+        pController.OnPrimaryAction();
     }
 
     //Calls the secondary action on the player
     private void OnSecondaryAction()
     {
-        //!TODO: Call secondary action on player controller
-        Debug.Log("OnSecondaryAction!");
+        if (!canInput) { return; }
+
+        pController.OnSecondaryAction();
     }
 
-    //Updates the given movement with the base movement class
+    //Updates the given movement with the player movement class
     private void UpdateMovement()
     {
-        if (canInput)
-        {
-            //!TODO set direction in player controller here
-        }
+        if (!canInput) { return; }
+
+        pController.SetMovement(newDirection);
+
+    }
+
+    public void SetCanInput(bool _canInput)
+    {
+        canInput = _canInput;
     }
 }
