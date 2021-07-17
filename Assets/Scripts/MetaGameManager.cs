@@ -14,7 +14,7 @@ public class MetaGameManager : MonoBehaviour
     private Dictionary<Item.ItemType, GameObject> itemDataDict;
 
 
-    private GameManager currentGame;
+    public GameManager currentGame;
     private Item.ItemType heldItem;
 
     void Start()
@@ -32,7 +32,11 @@ public class MetaGameManager : MonoBehaviour
     }
 
     public void SwitchToGame(GameManager game) {
-        
+        // currentGame.gameObject.SetActive(false);
+        // game.gameObject.SetActive(true);
+        game.EnableGame(currentGame);
+        currentGame.DisableGame();
+        currentGame=game;
     }
 
     public void HoldItem(Item.ItemType itemType) {
