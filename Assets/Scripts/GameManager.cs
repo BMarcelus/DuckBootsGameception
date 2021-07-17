@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject player;
-    public GameObject spawnPoint;
+    public GameObject activeObjects;
+    private GameManager parentGame = null;
 
-    public void EnableGame() {
-        player.SetActive(true);
+    public void EnableGame(GameManager parentGame) {
+        activeObjects.SetActive(true);
+        if(this.parentGame==null)
+        this.parentGame = parentGame; // for going backwards
     }
     public void DisableGame() {
-        player.SetActive(false);
+        activeObjects.SetActive(false);
     }
     public void Retract() {
 
