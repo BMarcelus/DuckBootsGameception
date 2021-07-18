@@ -5,7 +5,8 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     public enum ItemType {
-        None
+        None,
+        FakeItem,
     }
     public ItemType itemType;
     public Transform visualHolder;

@@ -34,8 +34,8 @@ public class MetaGameManager : MonoBehaviour
     public void SwitchToGame(GameManager game) {
         // currentGame.gameObject.SetActive(false);
         // game.gameObject.SetActive(true);
-        game.EnableGame(currentGame);
         currentGame.DisableGame();
+        game.EnableGame(currentGame);
         currentGame=game;
     }
 
@@ -45,6 +45,10 @@ public class MetaGameManager : MonoBehaviour
 
     public void ClearItem() {
         heldItem = Item.ItemType.None;
+    }
+    
+    public Item.ItemType GetHeldItem() {
+        return heldItem;
     }
 
     void Update()
