@@ -24,6 +24,7 @@ public class MetaGameManager : MonoBehaviour
         foreach(ItemData itemData in itemDatas) {
             itemDataDict.Add(itemData.itemType, itemData.visual);
         }
+        currentGame.EnableGame(null);
     }
 
     public GameObject GetItemVisualPrefab(Item.ItemType itemType) {
@@ -41,6 +42,7 @@ public class MetaGameManager : MonoBehaviour
 
     public void HoldItem(Item.ItemType itemType) {
         heldItem = itemType;
+        currentGame.SetHeldItem(itemType, GetItemVisualPrefab(itemType));
     }
 
     public void ClearItem() {

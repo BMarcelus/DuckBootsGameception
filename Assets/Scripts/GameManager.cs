@@ -23,13 +23,16 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        if(this!=MetaGameManager.instance.currentGame) activeObjects.SetActive(false);
+    public void SetHeldItem(Item.ItemType itemType, GameObject visualPrefab) {
+        heldItemSprite.SetItem(itemType, visualPrefab);
     }
 
-    // Update is called once per frame
+    void Awake()
+    {
+        // if(this!=MetaGameManager.instance.currentGame)
+        activeObjects.SetActive(false);
+    }
+
     void Update()
     {
         

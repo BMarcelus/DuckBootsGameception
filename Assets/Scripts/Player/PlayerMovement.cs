@@ -9,6 +9,10 @@ public class PlayerMovement : MonoBehaviour
 
     protected Rigidbody2D body;
 
+    private void OnDisable() {
+        StopMoving();
+    }
+
     protected virtual void Awake()
     {
         body = GetComponent<Rigidbody2D>();

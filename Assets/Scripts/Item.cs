@@ -21,6 +21,15 @@ public class Item : MonoBehaviour
         visual.transform.parent = visualHolder;
     }
 
+    public void SetItem(Item.ItemType itemType, GameObject visualPrefab) {
+        this.itemType = itemType;
+        foreach (Transform child in visualHolder) {
+            GameObject.Destroy(child.gameObject);
+        }
+        GameObject visual = Instantiate(visualPrefab, visualHolder.position, visualHolder.rotation);
+        visual.transform.parent = visualHolder;
+    }
+
     virtual public void Triggered(GameObject gameObject) {
 
     }
