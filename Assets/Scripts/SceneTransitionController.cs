@@ -25,43 +25,42 @@ public class SceneTransitionController : MonoBehaviour
     protected CanvasGroup faderCanvasGroup;
     protected float fadeDuration = 1f;
 
-    protected GAMES currGame;
-    public char spawnChar = '_';
-
     private bool isFading;
     public bool IsFading { get { return isFading; } }
-
-    public MetaGameManager mgm;
 
     private void Awake()
     {
         if (instance != null && instance != this) { Destroy(this); }
         else { instance = this; }
+
+        faderCanvasGroup = GetComponent<CanvasGroup>();
     }
 
-    public void FadeAndLoadGame(GAMES _loadGame, char _spawnChar)
+    public void FadeAndLoadGame()
     {
         if (isFading) { return; }
 
-        StartCoroutine(FadeAndSwitchScenes(_loadGame, _spawnChar));
+        StartCoroutine(FadeAndSwitchScenes());
     }
 
     // This is the main coroutine where it goes through the entire game transition
-    private IEnumerator FadeAndSwitchScenes(GAMES _loadGame, char _spawnChar)
+    private IEnumerator FadeAndSwitchScenes()
     {
         //!TODO: Tell game manager that player can't input here
+        Time.timeScale = 0;
 
         yield return StartCoroutine(Fade(1f));
         faderCanvasGroup.alpha = 1f;
         OnGameUnload?.Invoke();
 
-        yield return null;
+        //yield return null;
 
-        currGame = _loadGame;
-        spawnChar = _spawnChar;
         OnGameLoad?.Invoke();
 
+        Time.timeScale = 1;
+
         yield return StartCoroutine(Fade(0f));
+
 
         //!TODO: Tell game manager that player can input here
     }
@@ -82,7 +81,7 @@ public class SceneTransitionController : MonoBehaviour
 
         while (!Mathf.Approximately(faderCanvasGroup.alpha, finalAlpha))
         {
-            faderCanvasGroup.alpha = Mathf.MoveTowards(faderCanvasGroup.alpha, finalAlpha, fadeSpeed * Time.deltaTime);
+            faderCanvasGroup.alpha = Mathf.MoveTowards(faderCanvasGroup.alpha, finalAlpha, fadeSpeed * Time.unscaledDeltaTime);
             yield return null;
         }
 
@@ -95,10 +94,4 @@ public class SceneTransitionController : MonoBehaviour
 
         faderCanvasGroup.blocksRaycasts = false;
     }
-}
-
-public enum GAMES
-{
-    NONE,
-    HOOK
 }

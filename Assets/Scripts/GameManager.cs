@@ -29,7 +29,6 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        // if(this!=MetaGameManager.instance.currentGame)
         activeObjects.SetActive(false);
     }
 

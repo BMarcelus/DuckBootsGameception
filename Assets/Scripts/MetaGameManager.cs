@@ -15,7 +15,11 @@ public class MetaGameManager : MonoBehaviour
 
 
     public GameManager currentGame;
+    public GameManager prevGame;
+
     private Item.ItemType heldItem;
+
+    private SceneTransitionController stc => SceneTransitionController.Instance;
 
     void Start()
     {
@@ -32,12 +36,30 @@ public class MetaGameManager : MonoBehaviour
         return visual;
     }
 
-    public void SwitchToGame(GameManager game) {
-        // currentGame.gameObject.SetActive(false);
-        // game.gameObject.SetActive(true);
-        currentGame.DisableGame();
-        game.EnableGame(currentGame);
-        currentGame=game;
+    public void SwitchToGame(GameManager game)
+    {
+        if (stc.IsFading) { return; }
+
+        prevGame = currentGame;
+        currentGame = game;
+
+        stc.OnGameUnload += DeloadGame;
+        stc.OnGameLoad += LoadGame;
+        stc.FadeAndLoadGame();
+    }
+
+    private void DeloadGame()
+    {
+        stc.OnGameUnload -= DeloadGame;
+        Debug.Log("Disabling " + prevGame.gameObject.name);
+        prevGame.DisableGame();
+    }
+
+    private void LoadGame()
+    {
+        stc.OnGameLoad -= LoadGame;
+        Debug.Log("Enabling " + currentGame.gameObject.name);
+        currentGame.EnableGame(prevGame);
     }
 
     public void HoldItem(Item.ItemType itemType) {
