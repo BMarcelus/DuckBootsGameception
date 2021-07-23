@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAnimatable : MonoBehaviour
+public class PlayerAnimatable : BaseAnimatable
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    protected PlayerMovement pMove;
+    protected PlayerController pController;
 
-    // Update is called once per frame
-    void Update()
+    protected override void Awake()
     {
-        
+        base.Awake();
+        pMove = GetComponent<PlayerMovement>();
+        pController = GetComponent<PlayerController>();
     }
 }

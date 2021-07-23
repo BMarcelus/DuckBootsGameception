@@ -32,22 +32,24 @@ public class PlayerController : MonoBehaviour
         if (movementDirection == Vector2.zero)
         {
             pMove.StopMoving();
+            pAni.PlayAnimation("Idle");
         }
         else
         {
             pMove.Move(movementDirection);
+            pAni.SetAniDirection(movementDirection);
+            pAni.PlayAnimation("Movement");
         }
     }
 
     public void SetDirection(Vector2 direction)
     {
         pMove.SetDirection(direction);
+        pAni.SetAniDirection(direction);
     }
 
     public virtual void SetCanInput(bool _canInput)
     {
         pInput.SetCanInput(_canInput);
     }
-
-
 }
