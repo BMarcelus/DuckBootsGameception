@@ -1,0 +1,426 @@
+fileFormatVersion: 2
+guid: bba65c1048b08774ebf57761c786ad9f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7630588211875307521
+    second: portal hover_0
+  - first:
+      213: -8732935875691318979
+    second: portal hover_1
+  - first:
+      213: 7151066249441511061
+    second: portal hover_2
+  - first:
+      213: 7640920093942096913
+    second: portal hover_3
+  - first:
+      213: 3297865595827864557
+    second: portal hover_4
+  - first:
+      213: -6182972083380766618
+    second: portal hover_5
+  - first:
+      213: -6731261359995968552
+    second: portal hover_6
+  - first:
+      213: -3537676834588242632
+    second: portal hover_7
+  - first:
+      213: -4661807423846488421
+    second: portal hover_8
+  - first:
+      213: 6878682874971670642
+    second: portal hover_9
+  - first:
+      213: -3748029828879730742
+    second: portal hover_10
+  - first:
+      213: 9162368318417187659
+    second: portal hover_11
+  - first:
+      213: 8137529498371639934
+    second: portal hover_12
+  - first:
+      213: 2008585274274270981
+    second: portal hover_13
+  - first:
+      213: 8144196681151236007
+    second: portal hover_14
+  - first:
+      213: 7572514659783631170
+    second: portal hover_15
+  - first:
+      213: -6955926728386877115
+    second: portal hover_16
+  - first:
+      213: -6372372463709089268
+    second: portal hover_17
+  - first:
+      213: -4998106524402706976
+    second: portal hover_18
+  - first:
+      213: -998330548881300798
+    second: portal hover_19
+  - first:
+      213: 2549297485169264881
+    second: portal hover_20
+  - first:
+      213: -6057891422021707155
+    second: portal hover_21
+  - first:
+      213: -284787928609575577
+    second: portal hover_22
+  - first:
+      213: -3385621910347688493
+    second: portal hover_23
+  - first:
+      213: -8056785263122156377
+    second: portal hover_24
+  - first:
+      213: -3628505282941590754
+    second: portal hover_25
+  - first:
+      213: -3045096763328337438
+    second: portal hover_26
+  - first:
+      213: -6394577089681432098
+    second: portal hover_27
+  - first:
+      213: 1803322306820325187
+    second: portal hover_28
+  - first:
+      213: -5237295668791168148
+    second: portal hover_29
+  - first:
+      213: 5702385955279914477
+    second: portal hover_30
+  - first:
+      213: -3868903578905386733
+    second: portal hover_31
+  - first:
+      213: -6710630515565927242
+    second: portal hover_32
+  - first:
+      213: -8804225399309860750
+    second: portal hover_33
+  - first:
+      213: 4391201390431603690
+    second: portal hover_34
+  - first:
+      213: 75150021399253740
+    second: portal hover_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1167
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: portal hover_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1006c14dc8b45e960800000000000000
+      internalID: 7630588211875307521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal hover_1
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d31772317116ec680800000000000000
+      internalID: -8732935875691318979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal hover_2
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5960f3badd0bd3360800000000000000
+      internalID: 7151066249441511061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal hover_3
+      rect:
+        serializedVersion: 2
+        x: 3117
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114209497500a0a60800000000000000
+      internalID: 7640920093942096913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal hover_4
+      rect:
+        serializedVersion: 2
+        x: 4156
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de34d4c594f54cd20800000000000000
+      internalID: 3297865595827864557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal hover_5
+      rect:
+        serializedVersion: 2
+        x: 5195
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668bee126aba13aa0800000000000000
+      internalID: -6182972083380766618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal hover_6
+      rect:
+        serializedVersion: 2
+        x: 6234
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3a023f471c592a0800000000000000
+      internalID: -6731261359995968552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal hover_7
+      rect:
+        serializedVersion: 2
+        x: 7273
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d4d3099a5a7eec0800000000000000
+      internalID: -3537676834588242632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal hover_8
+      rect:
+        serializedVersion: 2
+        x: 8312
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96e95ae8deed4fb0800000000000000
+      internalID: -4661807423846488421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portal hover_9
+      rect:
+        serializedVersion: 2
+        x: 9351
+        y: 0
+        width: 1039
+        height: 1167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 278cf3541adf57f50800000000000000
+      internalID: 6878682874971670642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
