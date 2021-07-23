@@ -30,4 +30,8 @@ public class SokobanController : MonoBehaviour
             }
         }
     }
+
+    public bool InBounds(int x, int y) {
+        return x >= 0 && x < objects.GetLength(0) && y >= 0 && y < objects.GetLength(1);
+    }
 }
