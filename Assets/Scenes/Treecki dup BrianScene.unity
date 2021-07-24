@@ -598,6 +598,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 1166166872}
+  introFrames: []
+  idleFrames: []
+  hoverFrames: []
 --- !u!1 &447879832
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +776,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 447879833}
+  introFrames: []
+  idleFrames: []
+  hoverFrames: []
 --- !u!61 &576161784
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -860,6 +866,7 @@ MonoBehaviour:
     visual: {fileID: 276785886578637125, guid: f3839157a2fccc848a056d167715c680, type: 3}
   currentGame: {fileID: 1565843592}
   prevGame: {fileID: 0}
+  debugLogs: 0
 --- !u!1001 &826348541
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1133,6 +1140,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 1565843592}
+  introFrames: []
+  idleFrames: []
+  hoverFrames: []
 --- !u!61 &1740539706
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1168,15 +1178,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5789823171851510460, guid: e3cf470a497cde54c96ad3f4d0699d0f, type: 3}
       propertyPath: m_Color.b
-      value: 0.36226413
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5789823171851510460, guid: e3cf470a497cde54c96ad3f4d0699d0f, type: 3}
       propertyPath: m_Color.g
-      value: 0.36226413
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5789823171851510460, guid: e3cf470a497cde54c96ad3f4d0699d0f, type: 3}
       propertyPath: m_Color.r
-      value: 0.9056604
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5789823172106063297, guid: e3cf470a497cde54c96ad3f4d0699d0f, type: 3}
       propertyPath: m_RootOrder
@@ -1204,6 +1214,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c6e1ec4021751843ae7fdc2e33559c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1783352735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5789823171851510462, guid: e3cf470a497cde54c96ad3f4d0699d0f, type: 3}
+  m_PrefabInstance: {fileID: 1783352732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1783352736
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1783352735}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c82a7145d6fbcf5479bc06dc7f95a1d0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1819530891
 GameObject:
   m_ObjectHideFlags: 0
@@ -1249,6 +1283,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   game: {fileID: 1166166872}
+  introFrames: []
+  idleFrames: []
+  hoverFrames: []
 --- !u!61 &1819530894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1513,6 +1550,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c35f19e99abfda478ad1a363c40d04c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1963246849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963246845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c995f049236fc5149ac1e08e0bb1604d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1783352736}
 --- !u!1 &2061604882
 GameObject:
   m_ObjectHideFlags: 0
