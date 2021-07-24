@@ -17,6 +17,8 @@ public class MetaGameManager : MonoBehaviour
     public GameManager currentGame;
     public GameManager prevGame;
 
+    public bool debugLogs = false;
+
     private Item.ItemType heldItem;
 
     private SceneTransitionController stc => SceneTransitionController.Instance;
@@ -51,14 +53,16 @@ public class MetaGameManager : MonoBehaviour
     private void DeloadGame()
     {
         stc.OnGameUnload -= DeloadGame;
-        Debug.Log("Disabling " + prevGame.gameObject.name);
+        if(debugLogs)
+            Debug.Log("Disabling " + prevGame.gameObject.name);
         prevGame.DisableGame();
     }
 
     private void LoadGame()
     {
         stc.OnGameLoad -= LoadGame;
-        Debug.Log("Enabling " + currentGame.gameObject.name);
+        if(debugLogs)
+            Debug.Log("Enabling " + currentGame.gameObject.name);
         currentGame.EnableGame(prevGame);
     }
 
