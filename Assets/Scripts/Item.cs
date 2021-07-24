@@ -13,10 +13,10 @@ public class Item : MonoBehaviour
     public void SetItem(Item.ItemType itemType) {
         this.itemType = itemType;
         GameObject visualPrefab = MetaGameManager.instance.GetItemVisualPrefab(itemType);
-        if(visualPrefab==null)return;       
         foreach (Transform child in visualHolder) {
             GameObject.Destroy(child.gameObject);
         }
+        if(visualPrefab==null)return;       
         GameObject visual = Instantiate(visualPrefab, visualHolder.position, visualHolder.rotation);
         visual.transform.parent = visualHolder;
     }
@@ -26,6 +26,7 @@ public class Item : MonoBehaviour
         foreach (Transform child in visualHolder) {
             GameObject.Destroy(child.gameObject);
         }
+        if(visualPrefab==null)return;       
         GameObject visual = Instantiate(visualPrefab, visualHolder.position, visualHolder.rotation);
         visual.transform.parent = visualHolder;
     }
