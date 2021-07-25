@@ -288,6 +288,7 @@ MonoBehaviour:
     visual: {fileID: 276785886578637125, guid: f3839157a2fccc848a056d167715c680, type: 3}
   currentGame: {fileID: 1243851435}
   prevGame: {fileID: 0}
+  debugLogs: 0
 --- !u!4 &86600511
 Transform:
   m_ObjectHideFlags: 0
@@ -3523,7 +3524,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 2ce66fc579c49ae42a325ca111a67380, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5351,7 +5352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2512511820397258549, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: -4.82
       objectReference: {fileID: 0}
     - target: {fileID: 2512511820397258549, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5384,6 +5385,14 @@ PrefabInstance:
     - target: {fileID: 2512511820397258549, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7396088594201971220, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -997458588455496876, guid: 8c9c075d4216f3b4c94d9f0d905bde25, type: 3}
+    - target: {fileID: 7396088594201971220, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
@@ -7442,7 +7451,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5789823172106063297, guid: e3cf470a497cde54c96ad3f4d0699d0f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5789823172106063297, guid: e3cf470a497cde54c96ad3f4d0699d0f, type: 3}
       propertyPath: m_LocalPosition.x
