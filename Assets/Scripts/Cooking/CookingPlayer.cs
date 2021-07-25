@@ -12,39 +12,72 @@ public class CookingPlayer : PlayerController {
 
     public override void OnPrimaryAction() {
         if (item.itemType == Item.ItemType.None) {
-            // Find the pantry we are closest to
-            Pantry closest = null;
+            // Try to pick up from floor
+            CookingIngredient closest2 = null;
             float closestDist = 9999;
-            foreach (var pantry in transform.parent.GetComponentsInChildren<Pantry>()) {
-                float dist = Vector3.Distance(transform.localPosition, pantry.transform.localPosition);
+            foreach (var o in transform.parent.GetComponentsInChildren<CookingIngredient>()) {
+                float dist = Vector3.Distance(transform.localPosition, o.transform.localPosition);
                 if (dist < closestDist) {
                     closestDist = dist;
-                    closest = pantry;
+                    closest2 = o;
                 }
             }
-
-            // Check if we are pretty close to that pantry
+            // Check if we are pretty close to that object
             if (closestDist < 1.25f) {
-                // Pick up item from that pantry
-                Debug.Log(closest.ingredient);
-                item.SetItem(Item.ItemType.FakeItem);
+                var i = closest2.GetComponent<CookingIngredient>();
+                item.SetItem(i.itemType);
+                MetaGameManager.instance.HoldItem(i.itemType);
+                Destroy(closest2.gameObject);
+            }
+            else {
+                // Try to pick up from pantry
+                Pantry closest = null;
+                closestDist = 9999;
+                foreach (var o in transform.parent.GetComponentsInChildren<Pantry>()) {
+                    float dist = Vector3.Distance(transform.localPosition, o.transform.localPosition);
+                    if (dist < closestDist) {
+                        closestDist = dist;
+                        closest = o;
+                    }
+                }
+                // Check if we are pretty close to that object
+                if (closestDist < 1.25f) {
+                    var p = closest.GetComponent<Pantry>();
+                    item.SetItem(p.ingredient);
+                    MetaGameManager.instance.HoldItem(p.ingredient);
+                }
             }
         }
         else {
+            var c = transform.parent.GetComponentInChildren<CookingController>();
             // Drop it on the plate if we are over the plate and it's the correct item
             if (plate != null) {
-                // TODO: Instantiate object here
-                Debug.Log("put on plate");
-
-                transform.parent.GetComponentInChildren<CookingController>().AdvanceRecipe();
+                if (c.AdvanceRecipe()) {
+                    var obj = Instantiate(
+                        MetaGameManager.instance.GetItemVisualPrefab(MetaGameManager.instance.GetHeldItem()),
+                        plate.transform.position + new Vector3(0, c.progress*0.3f, 0),
+                        plate.transform.rotation,
+                        plate.transform);
+                    obj.GetComponentInChildren<SpriteRenderer>().sortingOrder = c.progress;
+                    item.SetItem(Item.ItemType.None);
+                    MetaGameManager.instance.ClearItem();
+                }
+                else {
+                }
             }
             else {
                 // Otherwise, drop it on the table
-                // TODO: Instantiate object here
-                Debug.Log("put on table");
+                var itemType = MetaGameManager.instance.GetHeldItem();
+                var obj = Instantiate(
+                    MetaGameManager.instance.GetItemVisualPrefab(itemType),
+                    transform.position - new Vector3(0, 0.75f, 0),
+                    transform.rotation,
+                    transform.parent);
+                obj.AddComponent<CookingIngredient>();
+                obj.GetComponent<CookingIngredient>().itemType = itemType;
+                item.SetItem(Item.ItemType.None);
+                MetaGameManager.instance.ClearItem();
             }
-
-            item.SetItem(Item.ItemType.None);
         }
     }
 

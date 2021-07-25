@@ -8,6 +8,13 @@ public class Item : MonoBehaviour
         None,
         FakeItem,
         Boots,
+        Bread,
+        Cheese,
+        Tomato,
+        Lettuce,
+        Mushroom,
+        Egg,
+        Bacon,
     }
 
     public ItemType itemType;
