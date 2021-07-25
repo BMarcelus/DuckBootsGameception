@@ -18,7 +18,7 @@ public class InterItemSender : InteractableObject
         MovingItem mi = movingItemGO.GetComponent<MovingItem>();
         Debug.Log("MI: " + mi);
         mi.visualHolder = movingItemGO.transform;
-        mi.SetItem(pc.HeldItem.itemType, MetaGameManager.instance.GetItemVisualPrefab(pc.HeldItem.itemType));
+        mi.SetItem(pc.HeldItem);
         mi.Move(directionToSend);
         MetaGameManager.instance.RemoveItem();
     }
