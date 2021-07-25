@@ -5,12 +5,16 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public GameObject activeObjects;
-    public Item heldItemSprite;
+    protected Item heldItemSprite;
     private GameManager parentGame = null;
+
+    private PlayerController pc;
 
     public void EnableGame(GameManager parentGame) {
         activeObjects.SetActive(true);
-        if(heldItemSprite!=null) {
+        heldItemSprite = pc.HeldItem;
+
+        if (heldItemSprite!=null) {
             heldItemSprite.SetItem(MetaGameManager.instance.GetHeldItem());
         }
         if(this.parentGame==null)
@@ -29,7 +33,14 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        pc = GetComponentInChildren<PlayerController>();
+
         activeObjects.SetActive(false);
+    }
+
+    private void Start()
+    {
+
     }
 
     void Update()

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ClawShortend
+  m_Controller: {fileID: 9100000, guid: c82a7145d6fbcf5479bc06dc7f95a1d0, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: d0c6ab671c877344a812c52cc8709a0f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b214b69bd4bea5b418d4ae9e32c82bdc, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 763d7f4deaccd5443af5c657ab30008d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 1f88a01b388209044ab2b8624b182b68, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6eda07444a4c27f4d8389069db5d938d, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: a8e8c185a0fa62e48b77b7c36b61f867, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: c289331cccfb1044394dc224419ef51f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 34d38aef41f1f8849a91b2ea73cdce6b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ba5c141aa20476048a5773519e8a5d09, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bdfb22e0e2fea95468cf7798f5d33901, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 28450f8e92bf2b142be087229d1bb2b8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: d1d1237410c63d0429006fc541f243e2, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 0cf6b5b86d7881242a3dd13b1d202131, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b2647672ed6616c458a88dd45f20f6eb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b7b975a8d7b8da14ca1e6874b3d31d9e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b386fee8576c7c148b7d1329704806d7, type: 2}

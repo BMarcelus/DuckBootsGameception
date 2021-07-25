@@ -9,11 +9,15 @@ public class PlayerController : MonoBehaviour
     protected PlayerAnimatable pAni;
     protected PlayerInput pInput;
 
+    protected Item heldItem;
+    public Item HeldItem => heldItem;
+
     public virtual void Awake()
     {
         pMove = GetComponent<PlayerMovement>();
         pAni = GetComponent<PlayerAnimatable>();
         pInput = GetComponent<PlayerInput>();
+        heldItem = GetComponentInChildren<Item>();
     }
 
     public virtual void OnPrimaryAction()
@@ -46,6 +50,34 @@ public class PlayerController : MonoBehaviour
     {
         pMove.SetDirection(direction);
         pAni?.SetAniDirection(direction);
+    }
+
+    public Vector2 GetFacingDirection()
+    {
+        Vector2 moveDir = pMove.movementDirection.normalized;
+
+        if (Mathf.Abs(moveDir.x) > Mathf.Abs(moveDir.y))
+        {
+            if (moveDir.x > 0)
+            {
+                return Vector2.right;
+            }
+            else
+            {
+                return Vector2.left;
+            }
+        }
+        else
+        {
+            if (moveDir.y > 0)
+            {
+                return Vector2.up;
+            }
+            else
+            {
+                return Vector2.down;
+            }
+        }
     }
 
     public virtual void SetCanInput(bool _canInput)

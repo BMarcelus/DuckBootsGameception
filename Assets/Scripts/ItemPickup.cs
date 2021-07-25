@@ -8,16 +8,4 @@ public class ItemPickup : MonoBehaviour
     public void PickUpItem() {
         MetaGameManager.instance.HoldItem(itemType);
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

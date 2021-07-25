@@ -12,6 +12,9 @@ public class BaseAnimatable : MonoBehaviour
     {
         if (animator == null)
             animator = GetComponent<Animator>();
+
+        if (animator == null)
+            animator = GetComponentInChildren<Animator>();
     }
 
     protected virtual void Start()

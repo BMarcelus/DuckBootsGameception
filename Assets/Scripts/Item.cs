@@ -7,9 +7,12 @@ public class Item : MonoBehaviour
     public enum ItemType {
         None,
         FakeItem,
+        Boots,
     }
+
     public ItemType itemType;
     public Transform visualHolder;
+
     public void SetItem(Item.ItemType itemType) {
         this.itemType = itemType;
         GameObject visualPrefab = MetaGameManager.instance.GetItemVisualPrefab(itemType);
@@ -34,15 +37,19 @@ public class Item : MonoBehaviour
     virtual public void Triggered(GameObject gameObject) {
 
     }
-    // Start is called before the first frame update
-    void Start()
+
+    protected virtual void Awake()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void Start()
     {
-        
+
+    }
+
+    protected virtual void Update()
+    {
+
     }
 }

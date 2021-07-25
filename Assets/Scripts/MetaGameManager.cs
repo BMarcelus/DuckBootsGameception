@@ -34,6 +34,10 @@ public class MetaGameManager : MonoBehaviour
     }
 
     public GameObject GetItemVisualPrefab(Item.ItemType itemType) {
+
+        if (itemType == Item.ItemType.None)
+            return null;
+
         GameObject visual = itemDataDict[itemType];
         return visual;
     }
@@ -73,6 +77,12 @@ public class MetaGameManager : MonoBehaviour
 
     public void ClearItem() {
         heldItem = Item.ItemType.None;
+    }
+
+    public void RemoveItem()
+    {
+        ClearItem();
+        currentGame.SetHeldItem(Item.ItemType.None, null);
     }
     
     public Item.ItemType GetHeldItem() {
