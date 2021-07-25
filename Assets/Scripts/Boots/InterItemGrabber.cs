@@ -15,7 +15,6 @@ public class InterItemGrabber : InteractableObject
 
     public override void OnInteract(PlayerController pc)
     {
-        Debug.Log("OnInteract");
         itemPickup.PickUpItem();
     }
 }
