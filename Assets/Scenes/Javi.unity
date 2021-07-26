@@ -130,13 +130,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano (7)
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -739,13 +743,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano (6)
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1612,13 +1620,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2428,13 +2440,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2552,13 +2568,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3630,13 +3650,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano (5)
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3832,7 +3856,7 @@ Transform:
   - {fileID: 1226967099}
   - {fileID: 953778124}
   m_Father: {fileID: 774810713}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &686353367
 SpriteRenderer:
@@ -4250,6 +4274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1842468069}
+  - {fileID: 968112850}
   - {fileID: 686353366}
   - {fileID: 1427470636}
   - {fileID: 1624993400}
@@ -5483,6 +5508,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &968112849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 968112850}
+  m_Layer: 0
+  m_Name: SpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &968112850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968112849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.74, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 774810713}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &977014323
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5745,13 +5800,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano (8)
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5898,7 +5957,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2512511820397258549, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2512511820397258549, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
       propertyPath: m_LocalScale.x
@@ -8141,7 +8200,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5789823172106063297, guid: e3cf470a497cde54c96ad3f4d0699d0f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5789823172106063297, guid: e3cf470a497cde54c96ad3f4d0699d0f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8313,6 +8372,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c35f19e99abfda478ad1a363c40d04c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1427470640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1427470635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05c3e6e60b4f94842849e8c454fbe78c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 968112849}
 --- !u!1001 &1435507130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8742,13 +8814,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11039,13 +11115,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano (9)
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12837,13 +12917,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 774810713}
     m_Modifications:
+    - target: {fileID: 2884214374969986116, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
+      propertyPath: maxCoolupSeconds
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986118, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_Name
       value: MiniVolcano
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2884214374969986119, guid: 00568f6663649dd41ac988a43530c65b, type: 3}
       propertyPath: m_LocalPosition.x
