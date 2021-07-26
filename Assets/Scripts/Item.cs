@@ -15,6 +15,7 @@ public class Item : MonoBehaviour
         Mushroom,
         Egg,
         Bacon,
+        Lilypad,
     }
 
     public ItemType itemType;

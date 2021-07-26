@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     private PlayerController pc;
 
-    public void EnableGame(GameManager parentGame) {
+    public virtual void EnableGame(GameManager parentGame) {
         activeObjects.SetActive(true);
         heldItemSprite = pc.HeldItem;
 
@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         if(this.parentGame==null)
         this.parentGame = parentGame; // for going backwards
     }
-    public void DisableGame() {
+    public virtual void DisableGame() {
         activeObjects.SetActive(false);
     }
     public void Retract() {

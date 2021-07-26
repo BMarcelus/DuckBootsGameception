@@ -10,6 +10,7 @@ public class SokobanObject : MonoBehaviour
         Wall,
     }
     public SokoType type;
+    public Item.ItemType itemType = Item.ItemType.None;
 
     public int x;
     public int y;
@@ -20,20 +21,20 @@ public class SokobanObject : MonoBehaviour
     }
     public SokoState state = SokoState.Idle;
     public bool pushedOrPulled;
-    Vector3 moveFrom;
-    Vector3 moveTo;
-    float moveT;
+    public Vector3 moveFrom;
+    public Vector3 moveTo;
+    public float moveT;
 
     const float moveDuration = 0.2f;
 
-    public SokobanController sokoManager;
-
     void Start() {
-
+        moveFrom = transform.localPosition;
+        moveTo = transform.localPosition;
     }
 
     public bool Move(int dx, int dy, bool doPull)
     {
+        var sokoManager = SokobanController.instance;
         if (type == SokoType.Wall)  return false;
 
         /*if (state != SokoState.Idle) {

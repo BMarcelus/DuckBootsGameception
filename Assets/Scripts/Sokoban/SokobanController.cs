@@ -6,11 +6,14 @@ public class SokobanController : MonoBehaviour
 {
     public SokobanObject[,] objects = new SokobanObject[100,100];
     public const float gridUnitSize = 1f;
+    public static SokobanController instance;
 
     void Awake()
     {
+        instance = this;
+
         // Assign all objects to their space in the grid
-        foreach (Transform child in transform) {
+        foreach (Transform child in transform.parent) {
             var sokoObj = child.gameObject.GetComponent<SokobanObject>();
             if (sokoObj != null) {
                 child.localPosition = new Vector3(
@@ -25,7 +28,6 @@ public class SokobanController : MonoBehaviour
 
                 sokoObj.x = x;
                 sokoObj.y = y;
-                sokoObj.sokoManager = this;
                 objects[x, y] = sokoObj;
             }
         }

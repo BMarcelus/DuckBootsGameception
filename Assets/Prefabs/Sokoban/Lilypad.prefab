@@ -124,10 +124,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
+  itemType: 10
   x: 0
   y: 0
   state: 0
-  sokoManager: {fileID: 0}
+  pushedOrPulled: 0
 --- !u!114 &800450931189061044
 MonoBehaviour:
   m_ObjectHideFlags: 0
