@@ -15,8 +15,6 @@ public class MiniVolcano : MonoBehaviour
 
     private void Start() {
         this._initialMaxCoolUpDelay = Random.Range(0f, 1f) * 5f;
-        
-        // Random.InitState((int)(Random.Range(0, System.DateTime.Now.Ticks)));
     }
     private void FireFlame() {
         if (!spawnPoint) return;
@@ -25,12 +23,12 @@ public class MiniVolcano : MonoBehaviour
 
         this.maxNumberOfFlameRocks++;
 
-        float angleRads = Random.Range(-Mathf.PI * 0.5f, Mathf.PI * 0.5f);
-        float force = Random.Range(100f, 400f);
+        float angleRads = Random.Range(Mathf.PI * 0.15f, Mathf.PI * 0.5f);
+        float force = Random.Range(300f, 450f);
         
         GameObject instance = Instantiate(flamingRockPrefab, this.transform.position, Quaternion.identity);
         Rigidbody2D instanceRB = instance.GetComponent<Rigidbody2D>();
-        instanceRB.AddForce(RadianToVector2(angleRads).normalized * force);
+        instanceRB.AddForce(RadianToVector2(angleRads * (float)(Random.Range(-1, 1))).normalized * force);
     }
     public static Vector2 RadianToVector2(float radian)
      {
