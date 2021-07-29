@@ -10,7 +10,11 @@ public class GameManager : MonoBehaviour
 
     private PlayerController pc;
 
-    public virtual void EnableGame(GameManager parentGame) {
+    public WarpPoint entryWarp;
+    public WarpPoint[] exitWarps;
+
+    public virtual void EnableGame(GameManager parentGame)
+    {
         activeObjects.SetActive(true);
         heldItemSprite = pc.HeldItem;
 
@@ -20,31 +24,52 @@ public class GameManager : MonoBehaviour
         if(this.parentGame==null)
         this.parentGame = parentGame; // for going backwards
     }
-    public virtual void DisableGame() {
+
+    public virtual void DisableGame()
+    {
         activeObjects.SetActive(false);
     }
-    public void Retract() {
+    public virtual void Retract()
+    {
 
     }
 
-    public void SetHeldItem(Item.ItemType itemType, GameObject visualPrefab) {
+    public void SetHeldItem(Item.ItemType itemType, GameObject visualPrefab)
+    {
         heldItemSprite.SetItem(itemType, visualPrefab);
     }
 
-    void Awake()
+    protected virtual void Awake()
     {
         pc = GetComponentInChildren<PlayerController>();
 
         activeObjects.SetActive(false);
     }
 
-    private void Start()
+    protected virtual void Start()
     {
 
     }
 
-    void Update()
+    protected virtual void Update()
     {
         
+    }
+
+    protected void ReturnPlayerToEntry()
+    {
+        if (entryWarp == null) { return; }
+
+        pc.transform.position = entryWarp.transform.position + (Vector3)entryWarp.facingDir.normalized * 2;
+    }
+
+    protected void EnableExitWarps(bool isEnabled)
+    {
+        if (exitWarps == null || exitWarps.Length == 0) { return; }
+
+        foreach (WarpPoint w in exitWarps)
+        {
+            w.gameObject.SetActive(isEnabled);
+        }
     }
 }

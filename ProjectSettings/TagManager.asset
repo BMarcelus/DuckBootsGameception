@@ -41,6 +41,27 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Floor
+    uniqueID: 2903018189
+    locked: 0
+  - name: Floor Deco
+    uniqueID: 2751420009
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Object
+    uniqueID: 3735190029
+    locked: 0
+  - name: Object Deco
+    uniqueID: 2518931701
+    locked: 0
+  - name: Ceiling
+    uniqueID: 2470402515
+    locked: 0
+  - name: Ceiling Deco
+    uniqueID: 465354589
+    locked: 0
+  - name: UI
+    uniqueID: 1705903383
     locked: 0

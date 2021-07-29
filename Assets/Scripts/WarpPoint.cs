@@ -5,6 +5,7 @@ using UnityEngine;
 public class WarpPoint : MonoBehaviour
 {
     public GameManager game;
+    public Vector2 facingDir = Vector2.zero;
 
     // Used https://onlinegiftools.com/convert-gif-to-sprite-sheet to convert from gif to sprite sheet
     public Sprite[] introFrames;

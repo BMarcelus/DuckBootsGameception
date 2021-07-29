@@ -14,12 +14,14 @@ public class Customer : MonoBehaviour
 
     private CustomerSpawner parentSpawner;
     private SpriteRenderer sr;
+    private CustomerIndicator ci;
 
     protected void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
         sr = GetComponentInChildren<SpriteRenderer>();
+        ci = GetComponentInChildren<CustomerIndicator>();
     }
 
     protected void Start()
@@ -41,6 +43,7 @@ public class Customer : MonoBehaviour
         moveDir = dir.normalized;
         requestedColor = _requestedColor;
         parentSpawner = _parentSpawner;
+        ci.SetColor(_requestedColor);
     }
 
     protected void OnTriggerEnter2D(Collider2D collision)
@@ -56,29 +59,22 @@ public class Customer : MonoBehaviour
             {
                 ReceivedItem(false);
             }
+
+            Destroy(colItem.gameObject);
         }
 
         InterItemSender colIIS = collision.GetComponent<InterItemSender>();
         if (colIIS)
         {
-            Debug.Log("You lose!");
+            ReceivedItem(false);
         }
     }
 
     public void ReceivedItem(bool isSatisfied)
     {
-        if (isSatisfied)
-        {
-            sr.color = Color.green;
-            Debug.Log("I'm happy!");
-        }
-        else
-        {
-            sr.color = Color.red;
-            Debug.Log("I'm Angry!");
-        }
-
+        ci.SetSatisfaction(isSatisfied);
         col.enabled = false;
-        parentSpawner.RemoveCustomer(this);
+        parentSpawner.RemoveCustomer(this, isSatisfied);
+        rb.velocity = Vector3.zero;
     }
 }
