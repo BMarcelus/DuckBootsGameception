@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TopDownMovement : PlayerMovement
 {
-    protected float BASE_MOVEMENT_SPEED = 9f;
+    public float BASE_MOVEMENT_SPEED = 9f;
     public float speed;
 
     protected override void Start()
