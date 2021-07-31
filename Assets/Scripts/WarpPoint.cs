@@ -28,7 +28,11 @@ public class WarpPoint : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        StartWarp();
+
+        if (other.GetComponent<PlayerController>())
+        {
+            StartWarp();
+        }
     }
     void Start() {
         sr = GetComponent<SpriteRenderer>();
