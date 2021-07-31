@@ -7,14 +7,32 @@ public class MiniVolcano : MonoBehaviour
     // Start is called before the first frame update
     public GameObject spawnPoint;
     public GameObject flamingRockPrefab;
+    public float minCoolupSeconds = 0f;
     public float maxCoolupSeconds = 2f;
+    public float attackSpeed = 1f;
     public int maxNumberOfFlameRocks = -1;
     private float _currentTime = 0f;
     private int _currentFlameRockCount = 0;
-    public float _initialMaxCoolUpDelay = 0f;
+    private float _initialMaxCoolUpDelay = 0f;
+    public int arcCount = 3;
+    public float arcAngle;
+    private float myAngle;
 
     private void Start() {
-        this._initialMaxCoolUpDelay = Random.Range(0f, 1f) * 5f;
+        this._initialMaxCoolUpDelay = Random.Range(minCoolupSeconds, maxCoolupSeconds);
+        myAngle = transform.eulerAngles.z;
+        this._currentTime = this.attackSpeed;
+    }
+    private void OnEnable() {
+        this._initialMaxCoolUpDelay = Random.Range(minCoolupSeconds, maxCoolupSeconds);
+        this._currentTime = this.attackSpeed;
+    }
+    private void SpawnArc() {
+        for(int i=0;i<arcCount;i++) {
+            float angle = (i-arcCount/2) * arcAngle + myAngle;
+            GameObject instance = Instantiate(flamingRockPrefab, this.transform.position, Quaternion.Euler(0,0,angle));
+            instance.transform.parent = transform.parent;
+        }
     }
     private void FireFlame() {
         if (!spawnPoint) return;
@@ -38,11 +56,15 @@ public class MiniVolcano : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this._currentTime += Time.deltaTime;
-
-        if (this._currentTime >= (this.maxCoolupSeconds + this._initialMaxCoolUpDelay)) {
-            this.FireFlame();
-            this._currentTime = 0f;
+        if(this._initialMaxCoolUpDelay>0) {
+            this._initialMaxCoolUpDelay-=Time.deltaTime;
+        } else {
+            this._currentTime += Time.deltaTime;
+            if (this._currentTime >= (this.attackSpeed)) {
+                // this.FireFlame();
+                this.SpawnArc();
+                this._currentTime = 0f;
+            }
         }
     }
 }

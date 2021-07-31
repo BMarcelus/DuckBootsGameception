@@ -21,10 +21,14 @@ public class WarpPoint : MonoBehaviour
     State state;
     SpriteRenderer sr;
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    public void StartWarp() {
         state = State.Hover;
         t = 0;
         MetaGameManager.instance.SwitchToGame(game);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        StartWarp();
     }
     void Start() {
         sr = GetComponent<SpriteRenderer>();

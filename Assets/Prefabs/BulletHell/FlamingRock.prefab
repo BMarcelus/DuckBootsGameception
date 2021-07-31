@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 1888463781868958412}
   - component: {fileID: 580460954541610609}
   - component: {fileID: 5116773742418858176}
-  m_Layer: 0
+  - component: {fileID: 97851725}
+  m_Layer: 8
   m_Name: FlamingRock
   m_TagString: FlamingRock
   m_Icon: {fileID: 0}
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3754010830563209406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.59, y: 0.59, z: 0.59}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8aa1a8a031e82884eaff3868b595424e, type: 3}
   m_Color: {r: 0.8666667, g: 0.6565109, b: 0.11764705, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,12 +96,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.21
 --- !u!50 &580460954541610609
 Rigidbody2D:
   serializedVersion: 4
@@ -116,8 +117,8 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
-  m_Material: {fileID: 6200000, guid: 2f30b99a22cb92545b20d2b8403b799d, type: 2}
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -134,3 +135,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89323323cd8769c45aa998ec17171408, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &97851725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3754010830563209406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7614e60df9b4c5543bbea4a16e342cef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forwardVelocity: 3
