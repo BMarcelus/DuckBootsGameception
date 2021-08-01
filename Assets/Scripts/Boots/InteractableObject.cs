@@ -8,13 +8,24 @@ public class InteractableObject : MonoBehaviour
 
     protected PlayerController pc;
 
+    protected bool canInteract = true;
+
     protected virtual void Awake()
     {
         col = GetComponent<Collider2D>();
     }
 
+
     public virtual void OnInteract(PlayerController pc)
     {
-        Debug.Log("On Interact!");
+        if (!canInteract) { return; }
+        StartCoroutine(tempDisableOnInteract());
+    }
+
+    IEnumerator tempDisableOnInteract()
+    {
+        canInteract = false;
+        yield return new WaitForSeconds(.5f);
+        canInteract = true;
     }
 }

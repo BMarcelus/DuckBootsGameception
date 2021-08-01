@@ -8,7 +8,11 @@ public class InterItemPainter : InteractableObject
 
     public override void OnInteract(PlayerController pc)
     {
+        if (!canInteract) { return; }
+
         if (!pc.HeldItem) { return; }
+
+        base.OnInteract(pc);
 
         ColorType itemColor = pc.HeldItem.GetColor();
 
@@ -24,6 +28,8 @@ public class InterItemPainter : InteractableObject
 
     public ColorType GetColorCombo(ColorType a, ColorType b)
     {
+        Debug.Log("Check color " + a.ToString() + " to " + b.ToString() );
+
         if (a == b)
         {
             return a;

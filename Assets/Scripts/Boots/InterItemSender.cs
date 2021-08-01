@@ -8,7 +8,10 @@ public class InterItemSender : InteractableObject
 
     public override void OnInteract(PlayerController pc)
     {
+        if (!canInteract) { return; }
+
         base.OnInteract(pc);
+
         if (pc.HeldItem.itemType == Item.ItemType.None) { return; }
 
         GameObject movingItemGO = new GameObject();
