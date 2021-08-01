@@ -23,14 +23,19 @@ public class MetaGameManager : MonoBehaviour
 
     private SceneTransitionController stc => SceneTransitionController.Instance;
 
-    void Start()
+    private void Awake()
     {
         instance = this;
+    }
+
+    void Start()
+    {
         itemDataDict = new Dictionary<Item.ItemType, GameObject>();
         foreach(ItemData itemData in itemDatas) {
             itemDataDict.Add(itemData.itemType, itemData.visual);
         }
-        currentGame.EnableGame(null);
+
+        SwitchToGame(currentGame);
     }
 
     public GameObject GetItemVisualPrefab(Item.ItemType itemType) {

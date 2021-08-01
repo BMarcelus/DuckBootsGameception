@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public WarpPoint entryWarp;
     public WarpPoint[] exitWarps;
 
+    public string announcerText = "";
+
     public virtual void EnableGame(GameManager parentGame)
     {
         activeObjects.SetActive(true);

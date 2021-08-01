@@ -10,6 +10,7 @@ public class BootsGameManager : GameManager
     protected int maxCustomerAmount;
     protected int currCustomerAmount = 0;
     protected bool isSpawning = true;
+    protected int satisfiedCustomer = 0;
 
     protected float timer;
     protected float waitTime;
@@ -62,6 +63,7 @@ public class BootsGameManager : GameManager
         isGameRunning = true;
         ResetTimer();
         currCustomerAmount = 0;
+        satisfiedCustomer = 0;
         maxCustomerAmount = UnityEngine.Random.Range(7, 12);
         isSpawning = true;
         EnableExitWarps(false);
@@ -87,7 +89,7 @@ public class BootsGameManager : GameManager
         currSpawner.SpawnCustomer(randColor);
 
         currCustomerAmount++;
-        if (currCustomerAmount == maxCustomerAmount)
+        if (currCustomerAmount >= maxCustomerAmount)
         {
             isSpawning = false;
         }
@@ -98,10 +100,15 @@ public class BootsGameManager : GameManager
         if (!isSatisfied)
         {
             GameOver(false);
+            return;
         }
-        else if (currCustomerAmount == maxCustomerAmount)
+        else
         {
-            GameOver(true);
+            satisfiedCustomer++;
+            if (satisfiedCustomer >= maxCustomerAmount)
+            {
+                GameOver(true);
+            }
         }
     }
 

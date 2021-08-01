@@ -65,6 +65,15 @@ public class SceneTransitionController : MonoBehaviour
         //!TODO: Tell game manager that player can input here
     }
 
+    private IEnumerator RestartSameScene()
+    {
+        Time.timeScale = 0;
+        yield return StartCoroutine(Fade(1f));
+        faderCanvasGroup.alpha = 1f;
+        Time.timeScale = 1;
+        yield return StartCoroutine(Fade(0f));
+    }
+
     //Coroutine to fade the loading screen in and out
     public IEnumerator Fade(float finalAlpha)
     {
