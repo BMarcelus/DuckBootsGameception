@@ -318,9 +318,65 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 107680825913065413, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680825913065415, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680825913065434, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680825933999217, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680826036349705, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680826317760938, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680826335923317, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680826466874624, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680826477915562, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680826568322743, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680826952192399, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680827085261699, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680827141027384, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 107680827165714224, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
       propertyPath: m_Name
       value: RiverGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680827165714224, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 107680827165714230, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
       propertyPath: m_RootOrder
@@ -366,10 +422,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 107680827380599787, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680827497625959, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680827999951133, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 107680828017778931, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2567248686263599493, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2567248686919612591, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2567248686919612593, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
       propertyPath: game
       value: 
       objectReference: {fileID: 1063691385}
+    - target: {fileID: 2572967913631257549, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5847671623562261625, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
 --- !u!114 &916200985 stripped
@@ -472,6 +560,10 @@ PrefabInstance:
     - target: {fileID: 8919972664884567511, guid: 5d29a058237ebd14f903d6988ba621c9, type: 3}
       propertyPath: m_Name
       value: BootGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 8919972664884567511, guid: 5d29a058237ebd14f903d6988ba621c9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8919972664884567513, guid: 5d29a058237ebd14f903d6988ba621c9, type: 3}
       propertyPath: m_RootOrder
@@ -727,6 +819,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BulletHellGameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6977978785485081333, guid: d2fc73d3b3b46ea4c953912d5443ebce, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2fc73d3b3b46ea4c953912d5443ebce, type: 3}
 --- !u!1001 &8418132515796382648
@@ -747,6 +843,10 @@ PrefabInstance:
     - target: {fileID: 8418132516721121216, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
       propertyPath: m_Name
       value: SokobanGameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418132516721121216, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8418132516721121218, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
       propertyPath: m_RootOrder
