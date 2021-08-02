@@ -28,10 +28,9 @@ public class ItemSwapObject : MonoBehaviour
         itemIndicator = GetComponentInChildren<ItemIndicator>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        sr.sprite = notReceivedSprite;
-        itemIndicator.Show(itemSprite);
+        ResetItemIndicator();
     }
 
 
@@ -60,5 +59,13 @@ public class ItemSwapObject : MonoBehaviour
         sr.sprite = receivedSprite;
         itemIndicator.Hide();
         isOpened = true;
+    }
+
+    private void ResetItemIndicator()
+    {
+        itemIndicator.gameObject.SetActive(true);
+        sr.sprite = notReceivedSprite;
+        itemIndicator.Show(itemSprite);
+        isOpened = false;
     }
 }

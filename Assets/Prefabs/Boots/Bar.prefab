@@ -415,6 +415,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundMade: 5
   directionToSend: {x: -1, y: 0}
+  itemTypeToSend: 2
 --- !u!50 &1316160822831697887
 Rigidbody2D:
   serializedVersion: 4
