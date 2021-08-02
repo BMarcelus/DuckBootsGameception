@@ -41,6 +41,8 @@ public class UIAnnouncerText : MonoBehaviour
 
     public void ShowCurrGameInstructions()
     {
+        if (mgm.currentGame == null) { return; }
+
         ShowAndFadeText(mgm.currentGame.announcerText, 5f);
     }
 

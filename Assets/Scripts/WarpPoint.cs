@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class WarpPoint : MonoBehaviour
 {
     public GameManager game;
@@ -21,6 +22,9 @@ public class WarpPoint : MonoBehaviour
     State state;
     SpriteRenderer sr;
 
+    SoundBank sb => SoundBank.Instance;
+    AudioSource audioSource;
+
     public void StartWarp() {
         state = State.Hover;
         t = 0;
@@ -31,12 +35,17 @@ public class WarpPoint : MonoBehaviour
 
         if (other.GetComponent<PlayerController>())
         {
+            audioSource.PlayOneShot(sb.GetAudioClip(SoundType.Teleport));
             StartWarp();
         }
     }
-    void Start() {
+
+    private void Awake()
+    {
         sr = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
     }
+
     void Update() {
         // Check to see if we have set sprites, so we don't break people's scenes that don't have sprites set
         if (introFrames.Length == 0)  return;

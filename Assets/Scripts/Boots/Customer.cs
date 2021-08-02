@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D)), RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D)), RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(AudioSource))]
 public class Customer : MonoBehaviour
 {
     protected ColorType requestedColor;
@@ -16,12 +16,16 @@ public class Customer : MonoBehaviour
     private SpriteRenderer sr;
     private CustomerIndicator ci;
 
+    private AudioSource audioSource;
+    private SoundBank sb => SoundBank.Instance;
+
     protected void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         col = GetComponent<BoxCollider2D>();
         sr = GetComponentInChildren<SpriteRenderer>();
         ci = GetComponentInChildren<CustomerIndicator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     protected void Start()
@@ -72,6 +76,15 @@ public class Customer : MonoBehaviour
 
     public void ReceivedItem(bool isSatisfied)
     {
+        if (isSatisfied)
+        {
+            audioSource.PlayOneShot(sb.GetAudioClip(SoundType.CustomerHappy));
+        }
+        else
+        {
+            audioSource.PlayOneShot(sb.GetAudioClip(SoundType.CustomerSad));
+        }
+
         ci.SetSatisfaction(isSatisfied);
         col.enabled = false;
         parentSpawner.RemoveCustomer(this, isSatisfied);

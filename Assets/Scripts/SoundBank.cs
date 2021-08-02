@@ -47,7 +47,18 @@ public class SoundBank : MonoBehaviour
     {
         if (!sDict.ContainsKey(sType)) { return; }
 
+        if (sType == SoundType.None) { return; }
+
         audioSource.PlayOneShot(sDict[sType]);
+    }
+
+    public AudioClip GetAudioClip(SoundType sType)
+    {
+        if (!sDict.ContainsKey(sType)) { return null; }
+
+        if (sType == SoundType.None) { return null; }
+
+        return sDict[sType];
     }
 }
 
@@ -61,5 +72,12 @@ public struct SoundInfo
 public enum SoundType
 {
     None,
+    Success,
+    Failure,
+    CustomerHappy,
+    CustomerSad,
+    SendItem,
+    GrabItem,
+    Teleport,
 
 }
