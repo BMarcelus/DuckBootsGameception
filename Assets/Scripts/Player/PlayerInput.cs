@@ -5,12 +5,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerInput : MonoBehaviour
 {
-    private static MainControls controls;
+    private MainControls controls;
 
     private bool canInput;
 
     private Vector2 newDirection;
     private PlayerController pController;
+
+    private bool canPerform = true;
 
     private void Awake()
     {
@@ -65,6 +67,7 @@ public class PlayerInput : MonoBehaviour
 
     private void PrimaryAction_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
+        Debug.Log("Primary action performed");
         OnPrimaryAction();
     }
 
@@ -118,5 +121,12 @@ public class PlayerInput : MonoBehaviour
     public void SetCanInput(bool _canInput)
     {
         canInput = _canInput;
+    }
+
+    private IEnumerator TempDisablePerform()
+    {
+        canPerform = false;
+        yield return new WaitForSeconds(.1f);
+        canPerform = true;
     }
 }
