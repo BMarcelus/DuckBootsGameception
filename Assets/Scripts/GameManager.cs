@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         }
         if(this.parentGame==null)
         this.parentGame = parentGame; // for going backwards
+        UIAnnouncerText.instance.ShowCurrGameInstructions();
     }
 
     public virtual void DisableGame()

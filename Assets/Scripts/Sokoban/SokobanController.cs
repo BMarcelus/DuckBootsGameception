@@ -16,6 +16,7 @@ public class SokobanController : MonoBehaviour
         foreach (Transform child in transform.parent) {
             var sokoObj = child.gameObject.GetComponent<SokobanObject>();
             if (sokoObj != null) {
+                sokoObj.sokobanController=this;
                 child.localPosition = new Vector3(
                     Mathf.Round(child.localPosition.x),
                     Mathf.Round(child.localPosition.y),

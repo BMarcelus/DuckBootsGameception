@@ -1,6 +1,11 @@
 using UnityEngine;
 
 public class SokobanGameManager : GameManager {
+    public SokobanController sokobanController;
+    private void Awake() {
+        sokobanController = GetComponentInChildren<SokobanController>();
+        base.Awake();
+    }
     public override void EnableGame(GameManager parentGame) {
         // Create a sokoban crate instead of setting the carried item of the player
 
@@ -13,7 +18,7 @@ public class SokobanGameManager : GameManager {
             // Create item
 
             var player = FindPlayer();
-            var objects = SokobanController.instance.objects;
+            var objects = sokobanController.objects;
 
             int dx = 0;
             int dy = -1;
@@ -33,6 +38,7 @@ public class SokobanGameManager : GameManager {
                     obj.transform.localPosition.z);
 
             var so = obj.AddComponent<SokobanObject>();
+            so.sokobanController = sokobanController;
             so.x = x;
             so.y = y;
             objects[x, y] = so;
@@ -58,7 +64,7 @@ public class SokobanGameManager : GameManager {
         Check(x-1, y-1, ref obj);
         if (obj != null) {
             MetaGameManager.instance.HoldItem(obj.itemType);
-            SokobanController.instance.objects[obj.x, obj.y] = null;
+            sokobanController.objects[obj.x, obj.y] = null;
             Destroy(obj.gameObject);
         }
 
@@ -67,7 +73,7 @@ public class SokobanGameManager : GameManager {
 
     void Check(int x, int y, ref SokobanObject obj) {
         if (obj != null) return;
-        var objects = SokobanController.instance.objects;
+        var objects = sokobanController.objects;
         var b = objects[x, y];
         if (b != null && b.type == SokobanObject.SokoType.Crate && b.itemType != Item.ItemType.None) {
             obj = b;
@@ -75,7 +81,7 @@ public class SokobanGameManager : GameManager {
     }
 
     SokobanObject FindPlayer() {
-        var objects = SokobanController.instance.objects;
+        var objects = sokobanController.objects;
         for (int x=0; x<objects.GetLength(0); x++) {
             for (int y=0; y<objects.GetLength(1); y++) {
                 if (objects[x, y] != null && objects[x, y].type == SokobanObject.SokoType.Player) {

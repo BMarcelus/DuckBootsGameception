@@ -24,6 +24,7 @@ public class SokobanObject : MonoBehaviour
     public Vector3 moveFrom;
     public Vector3 moveTo;
     public float moveT;
+    public SokobanController sokobanController;
 
     const float moveDuration = 0.2f;
 
@@ -34,7 +35,7 @@ public class SokobanObject : MonoBehaviour
 
     public bool Move(int dx, int dy, bool doPull)
     {
-        var sokoManager = SokobanController.instance;
+        var sokoManager = sokobanController;//SokobanController.instance;
         if (type == SokoType.Wall)  return false;
 
         /*if (state != SokoState.Idle) {

@@ -7,6 +7,7 @@ using RedBlueGames.Tools.TextTyper;
 [RequireComponent(typeof(TMP_Text)), RequireComponent(typeof(TextTyper)), RequireComponent(typeof(AudioSource))]
 public class UIAnnouncerText : MonoBehaviour
 {
+    public static UIAnnouncerText instance;
     private TMP_Text text;
     private TextTyper textTyper;
     bool isFading;
@@ -20,21 +21,22 @@ public class UIAnnouncerText : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         textTyper = GetComponent<TextTyper>();
         text = GetComponent<TMP_Text>();
         stc = SceneTransitionController.Instance;
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void OnEnable()
-    {
-        stc.OnGameLoad += ShowCurrGameInstructions;
-    }
+    // private void OnEnable()
+    // {
+    //     stc.OnGameLoad += ShowCurrGameInstructions;
+    // }
 
-    private void OnDisable()
-    {
-        stc.OnGameLoad -= ShowCurrGameInstructions;
-    }
+    // private void OnDisable()
+    // {
+    //     stc.OnGameLoad -= ShowCurrGameInstructions;
+    // }
 
     private void Start()
     {
