@@ -81,6 +81,6 @@ public enum SoundType
     Teleport,
     TextBeep,
     PaintItem,
-
-
+    EnemyShoot,
+    Explosion,
 }

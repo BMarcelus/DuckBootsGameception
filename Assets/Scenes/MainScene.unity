@@ -373,6 +373,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2567248686263599515, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 698817153}
     - target: {fileID: 2567248686919612591, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -389,6 +393,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5878481507731093993, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 1936838182}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 621053b3958c91b4ea53bdf4838dc27e, type: 3}
 --- !u!114 &916200985 stripped
@@ -545,6 +553,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6418799145910038869, guid: 5d29a058237ebd14f903d6988ba621c9, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 916200985}
+    - target: {fileID: 8919972664755381257, guid: 5d29a058237ebd14f903d6988ba621c9, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 916200985}
     - target: {fileID: 8919972664884567511, guid: 5d29a058237ebd14f903d6988ba621c9, type: 3}
       propertyPath: m_Name
       value: BootGame
@@ -624,7 +640,7 @@ PrefabInstance:
     - target: {fileID: 437648892122666302, guid: 489e500cf3088504e82adf1499c4023c, type: 3}
       propertyPath: currentGame
       value: 
-      objectReference: {fileID: 698817153}
+      objectReference: {fileID: 916200985}
     - target: {fileID: 437648892122666303, guid: 489e500cf3088504e82adf1499c4023c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -681,7 +697,7 @@ PrefabInstance:
     - target: {fileID: 1270941945152928120, guid: c33377270a5a48c4d813af13df4837ea, type: 3}
       propertyPath: game
       value: 
-      objectReference: {fileID: 698817153}
+      objectReference: {fileID: 1100712900}
     - target: {fileID: 1270941945437290601, guid: c33377270a5a48c4d813af13df4837ea, type: 3}
       propertyPath: game
       value: 
@@ -880,11 +896,23 @@ PrefabInstance:
     - target: {fileID: 6200624202263517651, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
       propertyPath: game
       value: 
-      objectReference: {fileID: 1936838182}
+      objectReference: {fileID: 916200985}
     - target: {fileID: 6200624203667670257, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
       propertyPath: game
       value: 
       objectReference: {fileID: 1100712900}
+    - target: {fileID: 6200624203712550002, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 1100712900}
+    - target: {fileID: 7896246762097517438, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896246762097517441, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8418132516721121216, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
       propertyPath: m_Name
       value: SokobanGameManager
@@ -936,6 +964,14 @@ PrefabInstance:
     - target: {fileID: 8418132516721121218, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207876677840759778, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9207876677840759778, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e47aed9d291ecbc4caf36cd3de23687a, type: 3}
