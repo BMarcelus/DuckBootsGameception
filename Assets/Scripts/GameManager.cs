@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     protected virtual void Awake()
     {
         pc = GetComponentInChildren<PlayerController>();
+        heldItemSprite = pc.HeldItem;
 
         activeObjects.SetActive(false);
     }

@@ -79,5 +79,7 @@ public enum SoundType
     SendItem,
     GrabItem,
     Teleport,
+    EnemyShoot,
+    Explosion,
 
 }
