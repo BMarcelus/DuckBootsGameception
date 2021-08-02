@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using RedBlueGames.Tools.TextTyper;
 
-[RequireComponent(typeof(TMP_Text)), RequireComponent(typeof(TextTyper))]
+[RequireComponent(typeof(TMP_Text)), RequireComponent(typeof(TextTyper)), RequireComponent(typeof(AudioSource))]
 public class UIAnnouncerText : MonoBehaviour
 {
     private TMP_Text text;
@@ -15,11 +15,15 @@ public class UIAnnouncerText : MonoBehaviour
     private MetaGameManager mgm;
     private SceneTransitionController stc;
 
+    private AudioSource audioSource;
+    private SoundBank sb => SoundBank.Instance;
+
     private void Awake()
     {
         textTyper = GetComponent<TextTyper>();
         text = GetComponent<TMP_Text>();
         stc = SceneTransitionController.Instance;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -124,6 +128,6 @@ public class UIAnnouncerText : MonoBehaviour
             return;
         }
 
-        //Play text sound here!
+        audioSource.PlayOneShot(sb.GetAudioClip(SoundType.TextBeep));
     }
 }

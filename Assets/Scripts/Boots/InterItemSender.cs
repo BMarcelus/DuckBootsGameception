@@ -24,5 +24,7 @@ public class InterItemSender : InteractableObject
         mi.SetItem(pc.HeldItem);
         mi.Move(directionToSend);
         MetaGameManager.instance.RemoveItem();
+
+
     }
 }

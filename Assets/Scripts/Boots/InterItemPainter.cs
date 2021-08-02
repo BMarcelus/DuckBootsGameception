@@ -12,6 +12,8 @@ public class InterItemPainter : InteractableObject
 
         if (!pc.HeldItem) { return; }
 
+        if (pc.HeldItem.itemType == Item.ItemType.None) { return; }
+
         base.OnInteract(pc);
 
         ColorType itemColor = pc.HeldItem.GetColor();
@@ -24,6 +26,8 @@ public class InterItemPainter : InteractableObject
         {
             pc.HeldItem.SetColor(GetColorCombo(paintColor, itemColor));
         }
+
+        PlayInteractSound();
     }
 
     public ColorType GetColorCombo(ColorType a, ColorType b)

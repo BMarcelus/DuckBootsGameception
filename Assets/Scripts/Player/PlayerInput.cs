@@ -67,7 +67,6 @@ public class PlayerInput : MonoBehaviour
 
     private void PrimaryAction_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj)
     {
-        // Debug.Log("Primary action performed");
         OnPrimaryAction();
     }
 

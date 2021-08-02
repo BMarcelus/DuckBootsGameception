@@ -20,7 +20,6 @@ public class WaterfallWarp : MonoBehaviour
         {
             if (ww.GetInstanceID() != this.GetInstanceID())
             {
-                Debug.Log("Something entered WW!");
                 float yPos = ww.transform.position.y + ww.facingDir.y;
                 collision.transform.position = new Vector3(collision.transform.position.x, yPos, collision.transform.position.z);
             }

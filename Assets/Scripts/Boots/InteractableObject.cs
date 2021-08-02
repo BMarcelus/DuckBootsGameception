@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class InteractableObject : MonoBehaviour
 {
     protected Collider2D col;
@@ -10,8 +11,13 @@ public class InteractableObject : MonoBehaviour
 
     protected bool canInteract = true;
 
+    protected AudioSource audioSource;
+    protected SoundBank sb => SoundBank.Instance;
+    public SoundType soundMade;
+
     protected virtual void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         col = GetComponent<Collider2D>();
     }
 
@@ -27,5 +33,11 @@ public class InteractableObject : MonoBehaviour
         canInteract = false;
         yield return new WaitForSeconds(.5f);
         canInteract = true;
+    }
+
+    protected void PlayInteractSound()
+    {
+        if (soundMade != 0)
+            audioSource.PlayOneShot(sb.GetAudioClip(soundMade));
     }
 }
