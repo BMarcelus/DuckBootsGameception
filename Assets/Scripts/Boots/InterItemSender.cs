@@ -5,6 +5,7 @@ using UnityEngine;
 public class InterItemSender : InteractableObject
 {
     public Vector2 directionToSend;
+    public Item.ItemType itemTypeToSend;
 
     public override void OnInteract(PlayerController pc)
     {
@@ -12,7 +13,7 @@ public class InterItemSender : InteractableObject
 
         base.OnInteract(pc);
 
-        if (pc.HeldItem.itemType == Item.ItemType.None) { return; }
+        if (pc.HeldItem.itemType != itemTypeToSend) { return; }
 
         GameObject movingItemGO = new GameObject();
         movingItemGO.transform.parent = this.transform;

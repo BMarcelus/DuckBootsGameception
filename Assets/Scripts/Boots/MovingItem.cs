@@ -25,7 +25,13 @@ public class MovingItem : Item
         rb.gravityScale = 0;
         rb.freezeRotation = true;
         col.isTrigger = true;
+        StartCoroutine(DestoryAfter5Seconds());
+    }
 
+    protected void OnDisable()
+    {
+        StopAllCoroutines();
+        Destroy(this.gameObject);
     }
 
     protected override void Update()
@@ -36,5 +42,11 @@ public class MovingItem : Item
     public void Move(Vector2 dir)
     {
         moveDir = dir.normalized;
+    }
+
+    private IEnumerator DestoryAfter5Seconds()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(this.gameObject);
     }
 }
