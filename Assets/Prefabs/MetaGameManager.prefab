@@ -1,0 +1,77 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &437648892122666300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437648892122666303}
+  - component: {fileID: 437648892122666302}
+  m_Layer: 0
+  m_Name: MetaGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &437648892122666303
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437648892122666300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.222532, y: -1.3127959, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &437648892122666302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437648892122666300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adcd1691d7535f747abc955fdf73e0c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDatas:
+  - itemType: 0
+    visual: {fileID: 0}
+  - itemType: 1
+    visual: {fileID: 276785886578637125, guid: f3839157a2fccc848a056d167715c680, type: 3}
+  - itemType: 2
+    visual: {fileID: 276785886578637125, guid: 310de6ada9fd0784284e0c22a63b05a0, type: 3}
+  - itemType: 3
+    visual: {fileID: 6300420422448831901, guid: e0f97eb7fd956e7429c3adf54df6cc34, type: 3}
+  - itemType: 4
+    visual: {fileID: 7667131847764131886, guid: 3545b7a129c714742a3d781def8bfc55, type: 3}
+  - itemType: 5
+    visual: {fileID: 3572344595434435481, guid: 40d552bf65767cc458da1ddb7a994dec, type: 3}
+  - itemType: 6
+    visual: {fileID: 5302191550329697771, guid: 48448b4532f24bb42b248ea8d5379a52, type: 3}
+  - itemType: 7
+    visual: {fileID: 3270644486979447788, guid: 3b1d930bd94beb94c94b63236ca93f7d, type: 3}
+  - itemType: 8
+    visual: {fileID: 558499050092449478, guid: f776af9bc0fa7664b848e4b4f4388397, type: 3}
+  - itemType: 9
+    visual: {fileID: 4982696721542110842, guid: 1c3232c9a3ad8b9448dbcf6af070e350, type: 3}
+  - itemType: 10
+    visual: {fileID: 2628517975065272322, guid: af1be98e0a8fa2c4a8ee240051a7cfc6, type: 3}
+  - itemType: 11
+    visual: {fileID: 0}
+  - itemType: 12
+    visual: {fileID: 0}
+  - itemType: 13
+    visual: {fileID: 0}
+  currentGame: {fileID: 0}
+  prevGame: {fileID: 0}
+  debugLogs: 0

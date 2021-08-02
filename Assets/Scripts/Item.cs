@@ -16,6 +16,9 @@ public class Item : MonoBehaviour
         Egg,
         Bacon,
         Lilypad,
+        IceKey,
+        Key,
+        DuckBoots
     }
 
     public ItemType itemType;
