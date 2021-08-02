@@ -8,6 +8,7 @@ TagManager:
   - BottomWall
   - FlamingRock
   - Melter
+  - DuckBoots
   layers:
   - Default
   - TransparentFX
