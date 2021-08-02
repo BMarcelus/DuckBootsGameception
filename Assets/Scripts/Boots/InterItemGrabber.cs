@@ -17,8 +17,10 @@ public class InterItemGrabber : InteractableObject
     {
         if (!canInteract) { return; }
 
-        base.OnInteract(pc);
+        if (pc.HeldItem.itemType != Item.ItemType.None) { return; }
 
+        base.OnInteract(pc);
+ 
         itemPickup.PickUpItem();
     }
 }

@@ -157,6 +157,8 @@ MonoBehaviour:
     visual: {fileID: 276785886578637125, guid: 310de6ada9fd0784284e0c22a63b05a0, type: 3}
   - itemType: 1
     visual: {fileID: 276785886578637125, guid: f3839157a2fccc848a056d167715c680, type: 3}
+  - itemType: 12
+    visual: {fileID: 2279290796664653920, guid: 871b3b550cdc8b545b62723468b6f888, type: 3}
   currentGame: {fileID: 1740784985}
   prevGame: {fileID: 0}
   debugLogs: 0
@@ -1048,6 +1050,14 @@ PrefabInstance:
       propertyPath: game
       value: 
       objectReference: {fileID: 1712401627}
+    - target: {fileID: 6751475250446196734, guid: 5d29a058237ebd14f903d6988ba621c9, type: 3}
+      propertyPath: itemGiven
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6751475250446196734, guid: 5d29a058237ebd14f903d6988ba621c9, type: 3}
+      propertyPath: itemRequested
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 8919972664755381257, guid: 5d29a058237ebd14f903d6988ba621c9, type: 3}
       propertyPath: game
       value: 

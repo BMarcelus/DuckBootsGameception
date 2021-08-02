@@ -16,6 +16,8 @@ public class BootsGameManager : GameManager
     protected float waitTime;
     protected float endTime;
 
+    public GameObject GoalGameObject;
+
     protected CustomerSpawner[] customerSpawners;
 
     protected override void Awake()
@@ -54,7 +56,7 @@ public class BootsGameManager : GameManager
     private void ResetTimer()
     {
         timer = Time.time;
-        waitTime = UnityEngine.Random.Range(2f, 5f);
+        waitTime = UnityEngine.Random.Range(3f, 5f);
         endTime = timer + waitTime;
     }
 
@@ -64,9 +66,9 @@ public class BootsGameManager : GameManager
         ResetTimer();
         currCustomerAmount = 0;
         satisfiedCustomer = 0;
-        maxCustomerAmount = UnityEngine.Random.Range(7, 12);
+        maxCustomerAmount = UnityEngine.Random.Range(5, 8);
         isSpawning = true;
-        EnableExitWarps(false);
+        GoalGameObject.SetActive(false);
         ReturnPlayerToEntry();
         DestroyAllCustomers();
     }
@@ -75,7 +77,7 @@ public class BootsGameManager : GameManager
     {
         if (!isSpawning) { return; }
 
-        int cusInd = UnityEngine.Random.Range(0, customerSpawners.Length - 1);
+        int cusInd = UnityEngine.Random.Range(0, customerSpawners.Length);
         CustomerSpawner currSpawner = customerSpawners[cusInd];
 
         ColorType randColor;
@@ -116,7 +118,7 @@ public class BootsGameManager : GameManager
     {
         if (hasWon)
         {
-            EnableExitWarps(true);
+            GoalGameObject.SetActive(true);
             isGameRunning = false;
         }
         else
