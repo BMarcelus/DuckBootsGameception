@@ -79,5 +79,8 @@ public enum SoundType
     SendItem,
     GrabItem,
     Teleport,
+    TextBeep,
+    PaintItem,
+
 
 }

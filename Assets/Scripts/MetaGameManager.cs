@@ -76,6 +76,7 @@ public class MetaGameManager : MonoBehaviour
     }
 
     public void HoldItem(Item.ItemType itemType) {
+        SoundBank.Instance.PlaySound(SoundType.GrabItem);
         heldItem = itemType;
         currentGame.SetHeldItem(itemType, GetItemVisualPrefab(itemType));
     }

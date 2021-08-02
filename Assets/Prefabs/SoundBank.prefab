@@ -155,3 +155,7 @@ MonoBehaviour:
     key: 6
   - sound: {fileID: 8300000, guid: 8970c06cdf76b2848a2304535891d8d5, type: 3}
     key: 7
+  - sound: {fileID: 8300000, guid: 34b63bc84d75c2e488dab10d81bb4f7c, type: 3}
+    key: 8
+  - sound: {fileID: 8300000, guid: f8cbd86b9396581488a842379261522f, type: 3}
+    key: 9
