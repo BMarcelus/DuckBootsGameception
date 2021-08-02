@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(ItemPickup))]
 public class InterItemGrabber : InteractableObject
 {
-    ItemPickup itemPickup;
+    protected ItemPickup itemPickup;
 
     protected override void Awake()
     {

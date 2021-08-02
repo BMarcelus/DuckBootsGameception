@@ -20,6 +20,8 @@ public class BootsGameManager : GameManager
 
     protected CustomerSpawner[] customerSpawners;
 
+    public bool gameWonBefore = false;
+
     protected override void Awake()
     {
         customerSpawners = GetComponentsInChildren<CustomerSpawner>();
@@ -68,7 +70,10 @@ public class BootsGameManager : GameManager
         satisfiedCustomer = 0;
         maxCustomerAmount = UnityEngine.Random.Range(5, 8);
         isSpawning = true;
-        GoalGameObject.SetActive(false);
+        if (!gameWonBefore)
+        {
+            GoalGameObject.SetActive(false);
+        }
         ReturnPlayerToEntry();
         DestroyAllCustomers();
     }
@@ -120,6 +125,7 @@ public class BootsGameManager : GameManager
         {
             GoalGameObject.SetActive(true);
             isGameRunning = false;
+            gameWonBefore = true;
         }
         else
         {

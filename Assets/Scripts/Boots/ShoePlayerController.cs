@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,16 +16,32 @@ public class ShoePlayerController : PlayerController
 
     public override void OnPrimaryAction()
     {
-        OnInteract();
+
+
+        bool interacted = OnInteract();
+
+        if (!interacted && heldItem.itemType != Item.ItemType.None)
+        {
+            DropItem(heldItem.itemType);
+        }
     }
 
-    public void OnInteract()
+    private void DropItem(Item.ItemType itemToDrop)
+    {
+        var obj = Instantiate(new GameObject(), transform.position, transform.rotation, MetaGameManager.instance.currentGame.activeObjects.transform);
+        obj.AddComponent<InterTempItemGrabber>();
+        InterTempItemGrabber itig = obj.GetComponent<InterTempItemGrabber>();
+        itig.SetUp(itemToDrop);
+        MetaGameManager.instance.RemoveItem();
+    }
+
+    public bool OnInteract()
     {
         InteractableObject[] usableInteractables = FindUsableInteractables();
 
         if (usableInteractables == null)
         {
-            return;
+            return false;
         }
 
 
@@ -32,6 +49,8 @@ public class ShoePlayerController : PlayerController
         {
             inter.OnInteract(this);
         }
+
+        return true;
     }
 
     protected virtual InteractableObject[] FindUsableInteractables()
