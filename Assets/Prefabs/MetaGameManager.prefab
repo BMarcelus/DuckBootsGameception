@@ -67,9 +67,9 @@ MonoBehaviour:
   - itemType: 10
     visual: {fileID: 2628517975065272322, guid: af1be98e0a8fa2c4a8ee240051a7cfc6, type: 3}
   - itemType: 11
-    visual: {fileID: 0}
+    visual: {fileID: 4935734333237783094, guid: fe48b240e3e35b14ba9e54ef56b01b6d, type: 3}
   - itemType: 12
-    visual: {fileID: 0}
+    visual: {fileID: 2279290796664653920, guid: 871b3b550cdc8b545b62723468b6f888, type: 3}
   - itemType: 13
     visual: {fileID: 0}
   currentGame: {fileID: 0}

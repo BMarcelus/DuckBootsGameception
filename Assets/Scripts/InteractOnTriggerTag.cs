@@ -7,8 +7,14 @@ public class InteractOnTriggerTag : MonoBehaviour
 {
     public string tag;
     public UnityEvent OnTrigger;
+    public UnityEvent OnExit;
 
     private void OnTriggerEnter2D(Collider2D other) {
+        if(other.gameObject.tag == tag) {
+            OnTrigger.Invoke();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other) {
         if(other.gameObject.tag == tag) {
             OnTrigger.Invoke();
         }
