@@ -2993,6 +2993,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitWarpPoint
       objectReference: {fileID: 0}
+    - target: {fileID: 2512511820397258548, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2512511820397258549, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -3003,7 +3007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2512511820397258549, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.06
+      value: -6.26
       objectReference: {fileID: 0}
     - target: {fileID: 2512511820397258549, guid: e7f4787b2396d5d4781006ea85ca8213, type: 3}
       propertyPath: m_LocalPosition.z

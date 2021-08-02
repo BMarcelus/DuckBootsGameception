@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MiniVolcano : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class MiniVolcano : MonoBehaviour
     public int arcCount = 3;
     public float arcAngle;
     private float myAngle;
+    public UnityEvent OnShoot;
 
     private void Start() {
         this._initialMaxCoolUpDelay = Random.Range(minCoolupSeconds, maxCoolupSeconds);
@@ -33,6 +35,7 @@ public class MiniVolcano : MonoBehaviour
             GameObject instance = Instantiate(flamingRockPrefab, this.transform.position, Quaternion.Euler(0,0,angle));
             instance.transform.parent = transform.parent;
         }
+        OnShoot.Invoke();
     }
     private void FireFlame() {
         if (!spawnPoint) return;
